@@ -14,13 +14,10 @@
 
 To visualize each scene via Altizure online platform, please go to ``https://www.altizure.com/project-model?pid=PID``, where ``PID`` is the unique project ID (e.g., ``5bfe5ae0fe0ea555e6a969ca``). All ``PID`` are listed in the ``all_list.txt`` file.
 
-<iframe src="https://site.altizure.com/project/5bfe5ae0fe0ea555e6a969ca/model/embed#lights=off&amp;share=off&amp;view_mode=off" style="border:none;width:425px;height:300px"></iframe>
+<a href="https://www.altizure.com/project-model?pid=5bfe5ae0fe0ea555e6a969ca"><img src="doc/cover0.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=58eaf1513353456af3a1682a"><img src="doc/cover1.gif" width="425"></a>
 
-<iframe src="https://site.altizure.com/project/58eaf1513353456af3a1682a/model/embed#lights=off&amp;share=off&amp;view_mode=off" style="border:none;width:425px;height:300px"></iframe>
+<a href="https://www.altizure.com/project-model?pid=5c34529873a8df509ae57b58"><img src="doc/cover2.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=57f8d9bbe73f6760f10e916a"><img src="doc/cover3.gif" width="425"></a>
 
-<iframe src="https://site.altizure.com/project/5c34529873a8df509ae57b58/model/embed#lights=off&amp;share=off&amp;view_mode=off" style="border:none;width:425px;height:300px"></iframe>
-
-<iframe src="https://site.altizure.com/project/57f8d9bbe73f6760f10e916a/model/embed#lights=off&amp;share=off&amp;view_mode=off" style="border:none;width:425px;height:300px"></iframe>
 
 ## Dataset Structure:
 
