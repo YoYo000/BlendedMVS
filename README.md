@@ -4,11 +4,11 @@
 ## About the Dataset
 [BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains over 17k MVS training samples covering a variety of scenes, including architectures, sculptures and small objects. If you find the dataset useful for your research, please cite:
 ```
-@article{yao2019blendedmvs,
+@article{yao2020blendedmvs,
   title={BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks},
   author={Yao, Yao and Luo, Zixin and Li, Shiwei and Zhang, Jingyang and Ren, Yufan and Zhou, Lei and Fang, Tian and Quan, Long},
-  journal={arXiv:1911.10127 [cs.CV]},
-  year={2019}
+  journal={Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
 }
 ```
 
@@ -63,6 +63,16 @@ BlendedMVS
 
 ``PID`` here is the unique project ID listed in the ``all_list.txt`` file. For file formats of other training inputs, users may refer to [MVSNet](https://github.com/YoYo000/MVSNet) for more details. 
 
+## Usage
+Users may refer to [MVSNet](https://github.com/YoYo000/MVSNet) for training/validating MVSNet/R-MVSNet using BlendedMVS dataset.
+
+## Note 
+
+* Online augmentation should be implemented by users themselves. An example for tensorflow users could be found in [MVSNet](https://github.com/YoYo000/MVSNet).
+* The number of selected source images for a given reference image might be smaller than 10 (when parsing pair.txt).
+* The `depth_min` in ground truth cameras might be smaller or equal to zero (when parsing *_cam.txt).
 
 ## TODO: 
-1. Training and validation codes.
+* Stand alone validation scripts.
+* Download link for textured mesh models
+* Download link for input images and rendered images
