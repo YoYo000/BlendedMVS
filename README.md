@@ -34,8 +34,8 @@ For MVS networks, BlendedMVG is preprocessed and split into 3 smaller subsets (B
 |Dataset         | Resolution (768 x 576) | Resolution (2048 x 1536) | Supplementaries | 
 |:--------------:|:---------------:|:----------------------------------:|:---------------:|
 |BlendedMVS      |      [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVDgxb8MDGgoV74S?e=hJKlvV) (27.5 GB)    | [high-res set](https://1drv.ms/f/s!Ag8Dbz2Aqc81ezb9OciQ4zKwJ_w) (156 GB)    | [textured meshes](https://1drv.ms/u/s!Ag8Dbz2Aqc81fisTCEP9_Ahd7dg?e=FhYAX3) (9.42 GB), [other images](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVMgQoHpAJP4jlwo?e=0ChrgE) (7.56 GB) |
-|BlendedMVS+     |      [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVJXLaYJsQ9mDWRr?e=AtWhFD) (81.5 GB)        | -                              |   -           |
-|BlendedMVS++    |  [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVGr2okyznPkY6PH?e=pDog7q) (80.0 GB)        | -                              |   -           |
+|BlendedMVS+|[low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVJXLaYJsQ9mDWRr?e=AtWhFD) (81.5 GB)        | -    |   - |
+|BlendedMVS++|[low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVGr2okyznPkY6PH?e=pDog7q) (80.0 GB)  | -   |   -    |
 
 Experiments in [BlendedMVS paper](https://arxiv.org/abs/1911.10127) were conducting using the BlendedMVS low-res-dataset. In most cases, the low-res dataset would be suffice. 
 
