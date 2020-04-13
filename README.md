@@ -1,78 +1,112 @@
 # BlendedMVS
 
 
-## About the Dataset
-[BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains over 17k MVS training samples covering a variety of scenes, including architectures, sculptures and small objects. If you find the dataset useful for your research, please cite:
-```
-@article{yao2020blendedmvs,
-  title={BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks},
-  author={Yao, Yao and Luo, Zixin and Li, Shiwei and Zhang, Jingyang and Ren, Yufan and Zhou, Lei and Fang, Tian and Quan, Long},
-  journal={Computer Vision and Pattern Recognition (CVPR)},
-  year={2020}
-}
-```
-
-To visualize each scene via Altizure online platform, please go to ``https://www.altizure.com/project-model?pid=PID``, where ``PID`` is the unique project ID (e.g., ``5bfe5ae0fe0ea555e6a969ca``). All ``PID`` are listed in the ``all_list.txt`` file.
+## About
+[BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains 17k MVS training samples covering a variety of 113 scenes, including architectures, sculptures and small objects. 
 
 <a href="https://www.altizure.com/project-model?pid=5bfe5ae0fe0ea555e6a969ca"><img src="doc/cover0.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=58eaf1513353456af3a1682a"><img src="doc/cover1.gif" width="425"></a>
 
 <a href="https://www.altizure.com/project-model?pid=5c34529873a8df509ae57b58"><img src="doc/cover2.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=57f8d9bbe73f6760f10e916a"><img src="doc/cover3.gif" width="425"></a>
 
+## Upgrade to BlendedMVG
+BlendedMVG, a superset of [BlendedMVS](https://arxiv.org/abs/1911.10127), is a multi-purpose large-scale dataset for solving multi-view geometry related problems. Except for the 113 scenes in BlendedMVS dataset, we follow its blending precedure to generate 389 more scenes (originally shown in [GL3D](https://github.com/lzx551402/GL3D)) for BlendedMVG. The training image number is increased from 17k to over 110k.
+
+BlendedMVG and its precceding works ([BlendedMVS](https://arxiv.org/abs/1911.10127) and [GL3D](https://github.com/lzx551402/GL3D)) have been applied to several key 3D computer vision tasks, including image retrieval, image feature detection and description, two-view outlier rejection and multi-view stereo. If you find BlendedMVS or BlendedMVG useful for your research, please cite: 
+
+```
+@article{yao2020blendedmvs,
+  title={BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks},
+  author={Yao, Yao and Luo, Zixin and Li, Shiwei and Zhang, Jingyang and Ren, Yufan and Zhou, Lei and Fang, Tian and Quan, Long},
+  journal={Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}
+```
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">BlendedMVS</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>!!!
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">BlendedMVS and BlendedMVG</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>!!!
 
 
 ## Download
 
-We provide both high-resolution and low-resolution training data in BlendedMVS dataset. 
+For MVS networks, BlendedMVG is preprocessed and split into 3 smaller subsets (BlendedMVS, BlendedMVS+ and BlendedMVS++):
 
-* High-resolution set: Image and depth map resolutions are set to 2048 x 1536.
-* Low-resolution set: Image and depth map resolutions are set to 768 x 576. 
+|Dataset         | Resolution (768 x 576) | Resolution (2048 x 1536) | Supplementaries | 
+|:--------------:|:---------------:|:----------------------------------:|:---------------:|
+|BlendedMVS      |      [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVDgxb8MDGgoV74S?e=hJKlvV) (27.5 GB)    | [high-res set](https://1drv.ms/f/s!Ag8Dbz2Aqc81ezb9OciQ4zKwJ_w) (156 GB)    | [textured meshes](https://1drv.ms/u/s!Ag8Dbz2Aqc81fisTCEP9_Ahd7dg?e=FhYAX3) (9.42 GB), [other images](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVMgQoHpAJP4jlwo?e=0ChrgE) (7.56 GB) |
+|BlendedMVS+     |      [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVJXLaYJsQ9mDWRr?e=AtWhFD) (81.5 GB)        | -                              |   -           |
+|BlendedMVS++    |  [low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVGr2okyznPkY6PH?e=pDog7q) (80.0 GB)        | -                              |   -           |
 
-Currently the [low-resolution set](https://drive.google.com/open?id=1ilxls-VJNvJnB7IaFj7P0ehMPr7ikRCb) is provided for MVSNet training, the high-resolution set is provided upon request.
+Experiments in [BlendedMVS paper](https://arxiv.org/abs/1911.10127) were conducting using the BlendedMVS low-res-dataset. In most cases, the low-res dataset would be suffice. 
 
 ## Dataset Structure
 
-BlendedMVS dataset adopts MVSNet input format. The dataset structure is listed below:
- 
+BlendedMVS(G) dataset adopts MVSNet input format. Please structure your dataset as listed below after downloading the whole dataset:
+ 
 ```
-BlendedMVS                      
-├── all_list.txt                
-├── training_list.txt           
-├── validation_list.txt         
-├── PID0                        
-│   ├── blended_images          
-│   │	├── 00000000.jpg        
-│   │	├── 00000001.jpg        
-│   │	└── ...                 
-│   ├── cams                    
-│   │  	├── 00000000_cam.txt    
-│   │  	├── 00000001_cam.txt    
-│   │  	└── ...                 
-│   ├── rendered_depth_maps     
-│   │  	├── 00000000.pfm        
-│   │  	├── 00000001.pfm        
-│   │  	└── ...                 
-│   └── pair.txt                
-├── PID1                        
-├── ...                         
-└── PID112                      
+DATA_ROOT                 
+├── BlendedMVG_list.txt                
+├── BlendedMVS_list.txt                 
+├── BlendedMVS+_list.txt                
+├── BlendedMVS++_list.txt              
+├── ...
+├── PID0                        
+│   ├── blended_images          
+│   │	├── 00000000.jpg        
+│   │	├── 00000000_masked.jpg        
+│   │	├── 00000001.jpg        
+│   │	├── 00000001_masked.jpg        
+│   │	└── ...                 
+│   ├── cams                      
+│   │  	├── pair.txt           
+│   │  	├── 00000000_cam.txt    
+│   │  	├── 00000001_cam.txt    
+│   │  	└── ...                 
+│   └── rendered_depth_maps     
+│      	├── 00000000.pfm        
+│     	├── 00000001.pfm        
+│     	└── ...                    
+├── PID1                        
+├── ...                         
+└── PID501     
 ```
 
-``PID`` here is the unique project ID listed in the ``all_list.txt`` file. For file formats of other training inputs, users may refer to [MVSNet](https://github.com/YoYo000/MVSNet) for more details. 
+``PID`` here is the unique project ID listed in the ``BlendedMVG_list.txt`` file. We provide blended images with and without masks.  For detailed file formats, please refer to [MVSNet](https://github.com/YoYo000/MVSNet). 
 
-## Usage
-Users may refer to [MVSNet](https://github.com/YoYo000/MVSNet) for training/validating MVSNet/R-MVSNet using BlendedMVS dataset.
+## What you can do with BlendedMVS(G)?
+
+Please refer to following repositories on how to apply BlendedMVS(G) on multi-view stereo and feature detector/descriptor networks:
+
+|Tasks            |Repositories                                           | 
+|:--------------:|:--------------------------------------------------:|
+|Multi-view stereo | [MVSNet & R-MVSNet](https://github.com/YoYo000/MVSNet) | 
+|Descriptors & Detectors| [GL3D](https://github.com/lzx551402/GL3D) & [ASLFeat](https://github.com/lzx551402/ASLFeat) & [ContextDesc](https://github.com/lzx551402/contextdesc) & [GeoDesc](https://github.com/lzx551402/geodesc)  | 
+
+Except for the above tasks, we believe BlendedMVS(G) could also be applied to a variety of geometry related problems, including, but not limited to:
+
+* Sparse outlier rejection ([OANet](https://github.com/zjhthu/OANet), tested with the original GL3D)
+* Image retrieval ([MIRorR](https://github.com/hlzz/mirror), tested with the original GL3D)
+* Single-view depth/normal estimation
+* Two-view disparity estimation
+* Single/multi-view camera pose regression
+
+Feel free to modify the dataset and adjust to your own tasks! 
 
 ## Note 
 
-* Online augmentation should be implemented by users themselves. An example for tensorflow users could be found in [MVSNet](https://github.com/YoYo000/MVSNet).
+* Online augmentation should be implemented by users themselves. An example for tensorflow users could be found in [MVSNet](https://github.com/YoYo000/MVSNet). An example for pytorch users could be found in [CasMVSNet_pl](https://github.com/kwea123/CasMVSNet_pl)
 * The number of selected source images for a given reference image might be smaller than 10 (when parsing pair.txt).
-* The `depth_min` in ground truth cameras might be smaller or equal to zero (when parsing *_cam.txt).
+* The `depth_min` and `depth_max` in ground truth cameras might be smaller or equal to zero (very few, when parsing *_cam.txt).
+* The rendered depth map and blended images might be empty as the textured mesh model is not neccessarily to be complete (when dealing with *.pfm and *.jpg files).
 
-## TODO: 
-* Stand alone validation scripts.
-* Download link for textured mesh models
-* Download link for input images and rendered images
+
+## Changelog
+
+### 2020 April 13: 
+* Upgrade to BlendedMVG dataset!
+
+### 2020 April 13: 
+* Upload BlendedMVS textured mesh models
+* Upload BlendedMVS high-res dataset
+* Upload input and rendered images (low-res)
+* Fix bug on multi-texture mesh rendering, update BlendedMVS low-res dataset.
