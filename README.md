@@ -1,23 +1,8 @@
 # BlendedMVS
 
 
-<<<<<<< HEAD
 ## About
 [BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains 17k MVS training samples covering a variety of 113 scenes, including architectures, sculptures and small objects. 
-=======
-## About the Dataset
-[BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains over 17k MVS training samples covering a variety of scenes, including architectures, sculptures and small objects. If you find the dataset useful for your research, please cite:
-```
-@article{yao2019blendedmvs,
-  title={BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks},
-  author={Yao, Yao and Luo, Zixin and Li, Shiwei and Zhang, Jingyang and Ren, Yufan and Zhou, Lei and Fang, Tian and Quan, Long},
-  journal={arXiv:1911.10127 [cs.CV]},
-  year={2019}
-}
-```
-
-To visualize each scene via Altizure online platform, please go to ``https://www.altizure.com/project-model?pid=PID``, where ``PID`` is the unique project ID (e.g., ``5bfe5ae0fe0ea555e6a969ca``). All ``PID`` are listed in the ``all_list.txt`` file.
->>>>>>> parent of 56bb5ec... minor updates
 
 <a href="https://www.altizure.com/project-model?pid=5bfe5ae0fe0ea555e6a969ca"><img src="doc/cover0.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=58eaf1513353456af3a1682a"><img src="doc/cover1.gif" width="425"></a>
 
@@ -99,7 +84,6 @@ Please refer to following repositories on how to apply BlendedMVS(G) on multi-vi
 
 Except for the above tasks, we believe BlendedMVS(G) could also be applied to a variety of geometry related problems, including, but not limited to:
 
-<<<<<<< HEAD
 * Sparse outlier rejection ([OANet](https://github.com/zjhthu/OANet), tested with the original GL3D)
 * Image retrieval ([MIRorR](https://github.com/hlzz/mirror), tested with the original GL3D)
 * Single-view depth/normal estimation
@@ -126,8 +110,3 @@ Feel free to modify the dataset and adjust to your own tasks!
 * Upload BlendedMVS high-res dataset
 * Upload input and rendered images (low-res)
 * Fix bug on multi-texture mesh rendering, update BlendedMVS low-res dataset.
-=======
-
-## TODO: 
-1. Training and validation codes.
->>>>>>> parent of 56bb5ec... minor updates
