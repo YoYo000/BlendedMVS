@@ -9,9 +9,9 @@
 <a href="https://www.altizure.com/project-model?pid=5c34529873a8df509ae57b58"><img src="doc/cover2.gif" width="425"></a> <a href="https://www.altizure.com/project-model?pid=57f8d9bbe73f6760f10e916a"><img src="doc/cover3.gif" width="425"></a>
 
 ## Upgrade to BlendedMVG
-BlendedMVG, a superset of [BlendedMVS](https://arxiv.org/abs/1911.10127), is a multi-purpose large-scale dataset for solving multi-view geometry related problems. Except for the 113 scenes in BlendedMVS dataset, we follow its blending precedure to generate 389 more scenes (originally shown in [GL3D](https://github.com/lzx551402/GL3D)) for BlendedMVG. The training image number is increased from 17k to over 110k.
+BlendedMVG, a superset of [BlendedMVS](https://arxiv.org/abs/1911.10127), is a multi-purpose large-scale dataset for solving multi-view geometry related problems. Except for the 113 scenes in BlendedMVS dataset, we follow its blending procedure to generate 389 more scenes (originally shown in [GL3D](https://github.com/lzx551402/GL3D)) for BlendedMVG. The training image number is increased from 17k to over 110k.
 
-BlendedMVG and its precceding works ([BlendedMVS](https://arxiv.org/abs/1911.10127) and [GL3D](https://github.com/lzx551402/GL3D)) have been applied to several key 3D computer vision tasks, including image retrieval, image feature detection and description, two-view outlier rejection and multi-view stereo. If you find BlendedMVS or BlendedMVG useful for your research, please cite: 
+BlendedMVG and its preceding works ([BlendedMVS](https://arxiv.org/abs/1911.10127) and [GL3D](https://github.com/lzx551402/GL3D)) have been applied to several key 3D computer vision tasks, including image retrieval, image feature detection and description, two-view outlier rejection and multi-view stereo. If you find BlendedMVS or BlendedMVG useful for your research, please cite: 
 
 ```
 @article{yao2020blendedmvs,
@@ -37,7 +37,7 @@ For MVS networks, BlendedMVG is preprocessed and split into 3 smaller subsets (B
 |BlendedMVS+|[low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVJXLaYJsQ9mDWRr?e=AtWhFD) (81.5 GB)        | -    |   - |
 |BlendedMVS++|[low-res set](https://1drv.ms/u/s!Ag8Dbz2Aqc81gVGr2okyznPkY6PH?e=pDog7q) (80.0 GB)  | -   |   -    |
 
-Experiments in [BlendedMVS paper](https://arxiv.org/abs/1911.10127) were conducting using the BlendedMVS low-res-dataset. In most cases, the low-res dataset would be suffice. 
+Experiments in [BlendedMVS paper](https://arxiv.org/abs/1911.10127) were conducting using the BlendedMVS low-res-dataset. In most cases, the low-res dataset would be enough. 
 
 ## Dataset Structure
 
@@ -97,7 +97,7 @@ Feel free to modify the dataset and adjust to your own tasks!
 * Online augmentation should be implemented by users themselves. An example for tensorflow users could be found in [MVSNet](https://github.com/YoYo000/MVSNet). An example for pytorch users could be found in [CasMVSNet_pl](https://github.com/kwea123/CasMVSNet_pl)
 * The number of selected source images for a given reference image might be smaller than 10 (when parsing pair.txt).
 * The `depth_min` and `depth_max` in ground truth cameras might be smaller or equal to zero (very few, when parsing *_cam.txt).
-* The rendered depth map and blended images might be empty as the textured mesh model is not neccessarily to be complete (when dealing with *.pfm and *.jpg files).
+* The rendered depth map and blended images might be empty as the textured mesh model is not necessarily to be complete (when dealing with *.pfm and *.jpg files).
 
 
 ## Changelog
