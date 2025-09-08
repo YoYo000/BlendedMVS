@@ -1,6 +1,59 @@
 # BlendedMVS
 
 
+## Important Update on Dataset Download
+
+We created a Github release for stable download of the BlendedMVS/+/++ dataset. If you encounter problem downloading with the previews OneDrive Link, please try download the dataset as the release artifacts (please refer to [issue #40](https://github.com/YoYo000/BlendedMVS/issues/40))
+
+Download BlendedMVS:
+```
+wget https://github.com/YoYo000/BlendedMVS/releases/download/v1.0.0/BlendedMVS.zip
+```
+
+Download BlendedMVS+
+```
+#!/bin/bash
+
+# Base URL
+BASE_URL="https://github.com/YoYo000/BlendedMVS/releases/download/v1.0.1"
+
+# Download split files BlendedMVS1.z01 to BlendedMVS1.z42
+for i in $(seq -w 1 42); do
+    FILE="BlendedMVS1.z$i"
+    echo "Downloading $FILE..."
+    wget -c "${BASE_URL}/${FILE}"
+done
+
+# Download the final .zip descriptor
+ZIP_FILE="BlendedMVS1.zip"
+echo "Downloading $ZIP_FILE..."
+wget -c "${BASE_URL}/${ZIP_FILE}"
+
+echo "All files downloaded."
+```
+
+Download BlendedMVS++
+```
+#!/bin/bash
+
+# Base URL
+BASE_URL="https://github.com/YoYo000/BlendedMVS/releases/download/v1.0.2"
+
+# Download split files BlendedMVS2.z01 to BlendedMVS2.z42
+for i in $(seq -w 1 42); do
+    FILE="BlendedMVS2.z$i"
+    echo "Downloading $FILE..."
+    wget -c "${BASE_URL}/${FILE}"
+done
+
+# Download the final .zip descriptor
+ZIP_FILE="BlendedMVS2.zip"
+echo "Downloading $ZIP_FILE..."
+wget -c "${BASE_URL}/${ZIP_FILE}"
+
+echo "All files downloaded."
+```
+
 ## About
 [BlendedMVS](https://arxiv.org/abs/1911.10127) is a large-scale MVS dataset for generalized multi-view stereo networks. The dataset contains 17k MVS training samples covering a variety of 113 scenes, including architectures, sculptures and small objects. 
 
@@ -75,20 +128,14 @@ DATA_ROOT                
 
 ## What you can do with BlendedMVS(G)?
 
-Please refer to following repositories on how to apply BlendedMVS(G) on multi-view stereo and feature detector/descriptor networks:
+BlendedMVS(G) could also be applied to a variety of geometry related problems, including, but not limited to:
 
-|Tasks            |Repositories                                           | 
-|:--------------:|:--------------------------------------------------:|
-|Multi-view stereo | [MVSNet & R-MVSNet](https://github.com/YoYo000/MVSNet) | 
-|Descriptors & Detectors| [GL3D](https://github.com/lzx551402/GL3D) & [ASLFeat](https://github.com/lzx551402/ASLFeat) & [ContextDesc](https://github.com/lzx551402/contextdesc) & [GeoDesc](https://github.com/lzx551402/geodesc)  | 
-
-Except for the above tasks, we believe BlendedMVS(G) could also be applied to a variety of geometry related problems, including, but not limited to:
-
-* Sparse outlier rejection ([OANet](https://github.com/zjhthu/OANet), tested with the original GL3D)
-* Image retrieval ([MIRorR](https://github.com/hlzz/mirror), tested with the original GL3D)
-* Single-view depth/normal estimation
-* Two-view disparity estimation
-* Single/multi-view camera pose regression
+* Multi-view/Two-view stereo ([MVSNet & R-MVSNet](https://github.com/YoYo000/MVSNet))
+* Descriptors & Detectors & Matching ([GL3D](https://github.com/lzx551402/GL3D) & [ASLFeat](https://github.com/lzx551402/ASLFeat) & [ContextDesc](https://github.com/lzx551402/contextdesc) & [GeoDesc](https://github.com/lzx551402/geodesc) & [OANet](https://github.com/zjhthu/OANet))
+* Multi-view/Single-view camera pose estimation
+* Novel View Synthesis (Evaluation of NeRF and 3DGS related works)
+* Single-view depth/normal estimation ([Depth Anything](https://arxiv.org/pdf/2406.09414) & [Depth Pro](https://arxiv.org/pdf/2410.02073))
+* Transformer-based 3D Vision ([DUSt3R](https://arxiv.org/pdf/2312.14132) & [VGGT](https://vgg-t.github.io/))
 
 Feel free to modify the dataset and adjust to your own tasks! 
 
@@ -113,3 +160,8 @@ Feel free to modify the dataset and adjust to your own tasks!
 
 ### 2022 June 8:
 * Fix download links
+
+
+### 2025 Sep 8:
+* Download links by Github release
+* Update usages
