@@ -7,7 +7,24 @@ We created a Github release for stable download of the BlendedMVS/+/++ dataset. 
 
 Download BlendedMVS:
 ```
-wget https://github.com/YoYo000/BlendedMVS/releases/download/v1.0.0/BlendedMVS.zip
+#!/bin/bash
+
+# Base URL
+BASE_URL="https://github.com/YoYo000/BlendedMVS/releases/download/v1.0.0"
+
+# Download split files BlendedMVS.z01 to BlendedMVS.z15
+for i in $(seq -w 1 15); do
+    FILE="BlendedMVS.z$i"
+    echo "Downloading $FILE..."
+    wget -c "${BASE_URL}/${FILE}"
+done
+
+# Download the final .zip descriptor
+ZIP_FILE="BlendedMVS.zip"
+echo "Downloading $ZIP_FILE..."
+wget -c "${BASE_URL}/${ZIP_FILE}"
+
+echo "All files downloaded."
 ```
 
 Download BlendedMVS+
