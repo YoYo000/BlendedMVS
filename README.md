@@ -3,7 +3,7 @@
 
 ## Important Update on Dataset Download
 
-We created a Github release for stable download of the BlendedMVS/+/++ dataset. If you encounter problem downloading with the previews OneDrive Link, please try download the dataset as the release artifacts (please refer to [issue #40](https://github.com/YoYo000/BlendedMVS/issues/40))
+We created a Github release for stable download of the BlendedMVS/+/++ dataset. The high-res set and the supplementaries are in the releases too. If you encounter problem downloading with the previews OneDrive Link, please try download the dataset as the release artifacts (please refer to [issue #40](https://github.com/YoYo000/BlendedMVS/issues/40))
 
 Download BlendedMVS:
 ```
@@ -52,6 +52,36 @@ echo "Downloading $ZIP_FILE..."
 wget -c "${BASE_URL}/${ZIP_FILE}"
 
 echo "All files downloaded."
+```
+
+Download BlendedMVS high-res and the supplementaries
+```
+#!/bin/bash
+
+# download <release tag> <name> <number of split files>
+download() {
+    BASE_URL="https://github.com/YoYo000/BlendedMVS/releases/download/$1"
+    for i in $(seq 1 $3); do
+        wget -c "${BASE_URL}/$2.z$(printf %02d $i)"
+    done
+    wget -c "${BASE_URL}/$2.zip"
+}
+
+# high-res set
+download v1.0.3 dataset_full_res_0-29 46
+download v1.0.3 dataset_full_res_30-59 9
+download v1.0.3 dataset_full_res_60-89 13
+download v1.0.3 dataset_full_res_90-112 12
+
+# textured meshes and other images
+download v1.0.4 dataset_textured_meshes 4
+download v1.0.4 BlendedMVS_supp 3
+```
+
+Each set is a split zip, so join the parts before unzipping:
+```
+zip -s 0 dataset_full_res_0-29.zip --out dataset_full_res_0-29_joined.zip
+unzip dataset_full_res_0-29_joined.zip
 ```
 
 ## About
